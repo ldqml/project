@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+        
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 73px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+        
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: center;
+        }
+        .ll>li{
+            display: inline;
+            background-color:aqua;
+            border: 1px solid;
+        }
+        .da{
+            width: 400px;
+            height: 3000px;
+            margin:0 auto;
+            margin-top: 200px;
+        }
+        .dropdown-content>li{
+            list-style: none;
+            margin-left: 0px;
+        }
+        a{
+            text-decoration :none;
+        }
+        </style>
+</head>
+<body>
+    <div class="da">
+        <ul class="ll">
+            <li>
+                <div class="dropdown" id="dp1">
+                    <a href="javascript:;">Dropdown</a>
+                    <div class="dropdown-content" id="dp11">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
+            </li>
+            <li>
+                <div class="dropdown" id="dp2">
+                    <a href="javascript:;">Dropdown</a>
+                    <div class="dropdown-content" id="dp22">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
+            </li>
+            <li>
+                <div class="dropdown" id="dp3">
+                    <a href="javascript:;">Dropdown</a>
+                    <div class="dropdown-content" id="dp33">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+                  </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+   $(function() {
+    $('#dp1').mousemove(function(){
+       $(this).children('div').show();
+    })
+    $('#dp1').mouseout(function(){
+        $(this).children('div').hide();
+    })
+    $('#dp2').mousemove(function(){
+        $('#dp22').show();
+    })
+    $('#dp2').mouseout(function(){
+        $('#dp22').hide();
+    })
+    $('#dp3').mousemove(function(){
+        $('#dp33').css('display', 'block');
+    })
+    $('#dp3').mouseout(function(){
+        $('#dp33').css('display', 'none');
+    })
+   })
+</script>

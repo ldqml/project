@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .dv1{
+            width: 360px;
+        }
+        tr > td{
+            border: 1px solid;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+        }
+        .t1{
+            background-color: aqua;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="bt1">清除全部</button>
+    <div class="dv1">
+        <table border="0" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr class="t1">
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+            </thead>
+            <tbody class="tb1">
+                <tr>
+                    <td>1</td>
+                    <td>222</td>
+                    <td><a class="a1" href="#"> Delete</a></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>222</td>
+                    <td><a class="a2" href="#"> Delete</a></td>
+                </tr>
+                <tr>
+                    <td>111</td>
+                    <td>222</td>
+                    <td><a class="a3" href="#"> Delete</a></td>
+                </tr>
+                <tr>
+                    <td>1111</td>
+                    <td>222</td>
+                    <td><a class="a4" href="#"> Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.bt1').click(function(){
+            $('.tb1').empty();
+        })
+        $('.a1').click(function(){
+            $(this).parent().parent().empty();
+        })
+        $('.a2').click(function(){
+            $(this).parent().parent().empty();
+        })
+        $('.a3').click(function(){
+            $(this).parent().parent().empty();
+        })
+        $('.a4').click(function(){
+            $(this).parent().parent().empty();
+        })
+    })
+</script>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .tuchu{
+            width: 700px;
+            height: 350px;
+            border: 1px solid white;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        UL{
+            list-style: none;
+            display: inline;
+            display: inline-block;
+        }
+        li{
+            float: left;
+            margin-right: 10px;margin-top: 10px;
+        }
+        body{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="tuchu">
+        <ul>
+            <li><a href="#"><img src="img/01.jpg"></a></li>
+            <li><a href="#"><img src="img/02.jpg"></a></li>
+            <li><a href="#"><img src="img/03.jpg"></a></li>
+            <li><a href="#"><img src="img/04.jpg"></a></li>
+            <li><a href="#"><img src="img/05.jpg"></a></li>
+            <li><a href="#"><img src="img/06.jpg"></a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.tuchu li').mouseenter(function(){
+            $(this).css('opacity','1').siblings('li').css('opacity','0.4');
+        })
+        $('.tuchu').mouseleave(function(){
+            $('li').css('opacity','1');
+        })
+    })
+</script>

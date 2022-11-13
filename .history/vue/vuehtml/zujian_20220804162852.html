@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../vuejs/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <hr>
+    </div>
+    <script>
+        Vue.config.productionTip=false
+        const school =Vue.extend({
+            template:`
+             <div>
+                <h1>学校信息</h1>
+                <h3>学校名称:{{schoolname}}</h3>
+                <h3>地址:{{adress}}</h3>
+             </div>`,
+             data(){
+                return{
+                    schoolname:'九江职业技术学院',
+                    adress:'九江市濂溪区'
+                }
+             }
+        })
+        const student =Vue.extend({
+            template:`
+             <div>
+                <h1>学生信息</h1>
+                <h3>学生姓名:{{schoolname}}</h3>
+                <h3>年龄:{{adress}}</h3>
+             </div>`,
+             data(){
+                return{
+                    schoolname:'九江职业技术学院',
+                    adress:'九江市濂溪区'
+                }
+             }
+        })
+        new Vue({
+            el:'#root',
+            components:{
+                school,
+                student
+            }
+        })
+    </script>
+</body>
+</html>

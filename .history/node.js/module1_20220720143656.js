@@ -1,0 +1,1 @@
+const m1= require('module2.js')

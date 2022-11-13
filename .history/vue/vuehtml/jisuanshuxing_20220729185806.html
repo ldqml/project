@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vuejs/vue.js"></script>
+</head>
+<body>
+    <!-- <div id="root">
+        性：<input type="text" v-model="firstname"><br><br>
+        名：<input type="text" v-model="lastname"><br><br>
+        <span>全名：{{firstname.slice(0,3)}}-{{lastname}}</span>
+    </div> -->
+
+    <!-- <div id="root">
+        性：<input type="text" v-model="firstname"><br><br>
+        名：<input type="text" v-model="lastname"><br><br>
+        <span>全名:{{allname()}}</span>
+    </div> -->
+
+    <!-- <script>
+        Vue.config.productionTip=false
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                firstname:'张',
+                lastname:'三'
+            },
+            methods:{
+                allname(){
+                    return this.firstname + '-' + this.lastname
+                }
+            }
+        })
+    </script> -->
+
+
+    <div id="root">
+        性：<input type="text" v-model="firstname"><br><br>
+        名：<input type="text" v-model="lastname"><br><br>
+        <span>全名：{{allname}}</span>
+    </div>
+    <script>
+        Vue.config.productionTip=false
+        const vm = new Vue({
+            el:'#root',
+            data:{
+                firstname:'张',
+                lastname:'三'
+            },
+            computed:{
+                allname:{
+                    get(){
+                        return this.firstname+'-'+this.lastname
+                    },
+                    set(value){
+                        const arr=value.spilt('-')
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

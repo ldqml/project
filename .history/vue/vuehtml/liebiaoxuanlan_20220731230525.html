@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>汽车信息</h1>
+        <ul>
+            <li v-for="(car,index) in persons">
+                {{car.name}}-{{car.place}}-{{car.color}}
+            </li>
+        </ul>
+    </div>
+    <script src="../vuejs/vue.js"></script>
+    <script>
+        Vue.config.productionTip=false
+        const vm= new Vue({
+            el:'#root',
+            data:{
+                persons:[
+                    {name:'凯迪拉克',place:'28w',color:'黑色'},
+                    {name:'奥迪A8',place:'80w',color:'黑色'},
+                    {name:'长安un-v',place:'20w',color:'黛色'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

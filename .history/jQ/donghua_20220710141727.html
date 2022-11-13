@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .div1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin-top: 20px;
+            display: none;
+            float: left;
+        }
+        .div2{
+            width: 100px;
+            height: 200px;
+            background-color: aqua;
+            margin-top: 20px;
+            margin-left: 150px;
+            float: left;
+           display: none;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="bt1">显示</button>
+    <button type="button" class="bt2">隐藏</button>
+    <button type="button" class="bt3">切换</button>
+    <button type="button" class="bt7">淡入</button>
+    <button type="button" class="bt8">淡出</button>
+    <button type="button" class="bt4">滑入</button>
+    <button type="button" class="bt5">滑出</button>
+    <button type="button" class="bt6">切换2</button>
+    <div>
+    <div class="div1"></div> 
+    <div class="div2"></div> 
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.bt1').click(function(){
+            $('.div1').show(1000,function(){
+                alert('显示了')
+            });
+        })
+        $('.bt2').click(function(){
+            $('.div1').hide(1000,function(){
+                alert('隐藏了')
+            });
+        })
+        $('.bt3').click(function(){
+            $('.div1').toggle(1000);
+        })
+        $('.bt4').click(function(){
+            $('.div2').slideDown(1000,function(){
+                alert('滑入完成')
+            });
+        })
+        $('.bt5').click(function(){
+            $('.div2').slideUp(1000);
+        })
+        $('.bt6').click(function(){
+            $('.div2').slideToggle(1000);
+        })
+    })
+</script>

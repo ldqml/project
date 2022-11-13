@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h2>人员列表</h2>
+        <input type="text" placeholder="请输入名字" v-model="val">
+        <ul>
+            <li v-for="(obj,index) of newarr" :key='index'>
+                {{obj.name}}-{{obj.age}}-{{obj.sex}}
+            </li>
+        </ul>
+    </div>
+    <script src="../vuejs/vue.js"></script>
+    <script>
+        Vue.config.productionTip=false
+        const vm =new Vue({
+            el:'#root',
+            data:{
+                val:'',
+                stars:[
+                    {id:'01',name: '马冬梅',age:18,sex:'女'},
+                    {id:'02',name: '周冬雨',age:19,sex:'你'},
+                    {id:'03',name: '周杰伦',age:20,sex:'男'},
+                    {id:'04',name: '温兆伦',age:21,sex:'男'}
+                ],
+                newarr:[]
+            },
+            // watch:{
+            //     val:{
+            //         immediate:true,
+            //         handler(newval){
+            //             this.newarr=this.stars.filter((p)=>{
+            //                 return p.name.indexOf(newval)!==-1
+            //             })
+            //         }
+            //     }             
+            // }      
+        })
+    </script>
+</body>
+</html>

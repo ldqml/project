@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .a{
+            width: 200px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+        .b{
+            background-color: aqua;
+        }
+        .c{
+            background-color: blanchedalmond;
+        }
+        .d{
+            background-color: yellow;
+        }
+        .e{
+            font-size: 30px;
+            text-align: center;
+        }
+        .f{
+            border-radius: 5%;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div class="a" :class="xin" @click="dianji1">{{name}}</div><br><br>
+        <div class="a" :class="sui" @click="dianji2">{{name}}</div><br><br>
+        <div class="a" :class="all">{{name}}</div>
+    </div>
+    
+    <script src="../vuejs/vue.js"></script>
+    <script>
+        Vue.config.productionTip=false
+        const vm=new Vue({
+            el:'#root',
+            data:{
+                name:'心情',
+                xin:'b',
+                sui:'b',
+                allarr:['e','f']
+            },
+            methods: {
+                dianji1(){
+                    this.xin='c'
+                },
+                dianji2(){
+                    const arr =['b','c','d']
+                    const index= Math.floor(Math.random()*3) 
+                    this.sui=arr[index]
+                },
+            },
+        })
+    </script>
+</body>
+</html>

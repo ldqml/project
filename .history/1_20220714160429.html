@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var contact = {
+    qq:"111111",
+    name:"zhansan",
+    tel:"13546448",
+    sex:"men",
+    url:"http://www.dshfgjf"
+}
+var jsontext = JSON.stringify(contact,replacer,"\t");
+document.write("<pre>"+jsontext+"</pre>");
+function replacer(key, value){
+    if(value == 111111){
+        return undefined;
+    }else{
+        return value;
+    } 
+}
+    </script>
+</head>
+<body>
+</body>
+</html>

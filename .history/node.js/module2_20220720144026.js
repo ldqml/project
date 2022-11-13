@@ -1,0 +1,1 @@
+module.exports.usename ='小明'

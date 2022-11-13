@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="du">读取</button>
+    <button type="button" id="xiu">修改</button>
+    <div id="aa">
+        <p>我是一段文本</p>
+    </div>
+    <div id="bb">
+        我也是一段文本
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#du').click(function(){
+            $('aa').text();
+        });
+        $('xiu').click(function(){
+            $('bb').text('我是新的文本');
+        })
+    })
+</script>

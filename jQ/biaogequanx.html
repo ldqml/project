@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        table{
+            border: 1px solid;
+        }
+        th,td{
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="biao">
+        <table cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="checkbox-a">
+                    </th>
+                    <th>课程名称</th>
+                    <th>所属院校</th>
+                </tr>
+            </thead>
+            <tbody class="jj">
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>js</td>
+                    <td>经济管理学院</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>css</td>
+                    <td>经济管理学院</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>html</td>
+                    <td>经济管理学院</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td>jq</td>
+                    <td>经济管理学院</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('#checkbox-a').click(function(){
+            var check=$(this).prop('checked');
+            $('input').prop('checked', check)
+        })
+        $('.jj input').click(function(){
+            var chang=$('.jj input').length;
+            var xchang=$('.jj input:checked').length;
+            $('#checkbox-a').prop('checked',chang == xchang) 
+        })
+    })
+</script>

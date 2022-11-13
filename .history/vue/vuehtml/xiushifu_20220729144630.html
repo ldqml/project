@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vuejs/vue.js"></script>
+    <style type="text/css">
+        *{
+            margin-top: 20px;
+        }
+        .mp{
+            width: 300px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <h1>事件修饰符</h1>
+        <a :href="url" @click.prevent='dianji'>点我提示信息</a>
+        <div class="mp" @click="dianji2">
+            <button v-on:click.stop="dianji2">点我一下</button>
+        </div>
+    </div>
+
+    <script>
+        Vue.config.productionTip=false
+        const vm =new Vue({
+            el:'#root',
+            data:{
+                url:'www.baidu.com'
+            },
+            methods:{
+                dianji(event){
+                    alert('信息')
+                },
+                dianji2(){
+                    alert('hhh')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

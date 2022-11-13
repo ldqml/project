@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .div1{
+            width: 100px;
+            height: 100px;
+            background:greenyellow;
+        }
+        .font-size30{
+            font-size: 30px;
+        }
+        .width200{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" class="btn1">添加类</button>
+    <button type="button" class="btn2">移除类</button>
+    <button type="button" class="btn3">移除全部</button>
+    <button type="button" class="btn4">判断类</button>
+    <button type="button" class="btn5">切换类</button>
+    <div class="div1">
+        哈哈哈
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.btn1').click(function(){
+            $('.div1').addClass('font-size30 width200');
+        })
+    })
+    $(function(){
+        $('.btn2').click(function(){
+            $('.div1').removeClass('font-size30 width200');
+        })
+    })
+    $(function(){
+        $('.btn3').click(function(){
+            $('.div1').removeClass();
+        })
+    })
+    $(function(){
+        $('.btn4').click(function(){
+            if ($('.div1').hasClass('font-size30')) {
+                alert("有font-size30类");
+            }else{
+                alert("没有font-size30类");
+            }
+        })
+    })
+</script>

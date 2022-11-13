@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <input id="btn1" type="button" value="test" />
+    <script type="text/javascript">
+        $(function () {
+            $('#btn1').click(function () {
+                //创建弹出窗口
+                addDiv();
+            });
+        });
+        function addDiv() {//添加弹出窗体
+            $('<div id="divCell" style="position:absolute;background-color:#fbfbfb;z-index:1;top:50%;width:300px;height:120px;left:50%;border:1px solid #fbfbfb;box-shadow:10px 10px 5px #888888;border-radius:5px;margin-top:-60px;margin-left:-150px;text-align:center;line-height:120px;user-select:none;">正在运行，请等待...</div>').appendTo('body');
+            $('<div id="lightbox" style="position:absolute;top:0;bottom:0;left:0;right:0;background-color:#000;opacity:.3;"></div>').appendTo('body');
+        }
+        function deleteDiv() {//关闭弹出窗体   等任务执行完毕执行这个
+            var my = document.getElementById("divCell");
+            if (my != null)
+                my.parentNode.removeChild(my);
+ 
+            var lightbox = document.getElementById("lightbox");
+            if (lightbox != null)
+                lightbox.parentNode.removeChild(lightbox);
+        }
+    </script>
+</body>
+</html>

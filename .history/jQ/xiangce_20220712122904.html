@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        li{
+            display: inline;
+        }
+        ul{
+            list-style: none;
+        }
+        .pt{
+            position: relative;
+            left: 23%;
+        }
+        .da{
+            text-align: center;
+        }
+        .zui{
+            text-align: center;
+        }
+        #image{
+            position: relative;
+            left:20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="da">
+        <h2>相册</h2>
+    </div>
+    <div class="pt">
+        <ul class="cl">
+            <li>
+                <a href="img/01.jpg" title="第一张">
+                    <img src="img/01.jpg" alt="diyizhang">
+                </a>
+            </li>
+            <li>
+                <a href="img/02.jpg" title="第二张">
+                    <img src="img/02.jpg" alt="dierzhang">
+                </a>
+            </li>
+            <li>
+                <a href="img/03.jpg" title="第三张">
+                    <img src="img/03.jpg" alt="disanzhang">
+                </a>
+            </li>
+            <li>
+                <a href="img/04.jpg" title="第四张">
+                    <img src="img/04.jpg" alt="disizhang">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="dao" style="clear:both"></div>
+    <img src="" id="image" width="800px" height="500px" alt="">
+    <div class="zui">
+        <p id="te">选择一张图片</p>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.cl > li > a').click(function(){
+            var ximg = $(this).attr('href');
+            var xte = $(this).attr('title');
+            $('#image').attr('src',ximg);
+            $('#te').text(xte)
+            return false;
+        })
+    })
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .bian{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: 100px;
+            left: 650px;
+            text-align: center;
+        }
+        .col{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            top: 50px;
+            left: 50px;
+            text-align: center;
+            line-height: 300px;font-size: 30px;
+            background-color: pink;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bian">
+        <h1>按键改变颜色</h1>
+        <div class="col">
+            keycode为：<span class="zi"></span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(document).on('keydown',function(e){
+            switch(e.keyCode){
+                case 82:
+                $('.col').css('background-color','red')
+                $('.zi').text(e.keyCode)
+                break;
+                case 71:
+                $('.col').css('background-color','green')
+                $('.zi').text(e.keyCode)
+                break;
+                case 66:
+                $('.col').css('background-color','blue')
+                $('.zi').text(e.keyCode)
+                break;
+                case 80:
+                $('.col').css('background-color','purple')
+                $('.zi').text(e.keyCode)
+                break;
+                case 89:
+                $('.col').css('background-color','yellow')
+                $('.zi').text(e.keyCode)
+                break;
+                default:
+                $('.col').css('background-color','pink')
+                $('.zi').text("查无此健")
+                break;
+            }
+        })
+    })
+</script>

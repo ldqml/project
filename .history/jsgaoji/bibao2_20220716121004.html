@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="nac">
+        <li>刘德华</li>
+        <li>张学友</li>
+        <li>郭富城</li>
+        <li>黎明</li>
+    </ul>
+    <body>
+        <script>
+            var lis=document.querySelector('.nac').querySelectorAll('li');
+            for(var i=0;i<lis.length;i++) {
+                (function(i){
+                    setTimeout(function(){
+                        console.log(lis[i].innerHTML);
+                    },2000)
+                })(i);
+            }
+        </script>
+</body>
+</html>

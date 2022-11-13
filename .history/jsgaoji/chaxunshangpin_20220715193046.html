@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .sousuo{
+            width: 800px;
+            height: 50px;
+            position: absolute;
+            top: 20px;
+            left: 28%;
+        }
+        .sousuo input{
+            width: 80px;
+            text-align: center;
+        }
+        table{
+            width: 500px;
+            position: absolute;
+            top: 80px;
+            left: 32%;
+        }
+        tr{
+            width: 500px;
+            height: 30px;
+        }
+        th,td{
+            border: 1px solid;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="sousuo">
+        按照价格查询:<input type="text" class="start">--<input type="text" class="end">
+        <button class="sou">搜索</button>&nbsp;&nbsp;&nbsp; 按照商品名称查询:<input type="text" class="jname">
+        <button class="suo">搜索</button>
+    </div>
+    <table cellspacing="0" cellpadding="0" >
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>商品名称</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script>
+        var data=[{
+            id:1,
+            pname:'小米',
+            price:2999
+        },{
+            id:2,
+            pname:'华为',
+            price:3799
+        },{
+            id:3,
+            pname:'OPPO',
+            price:1299
+        },{
+            id:4,
+            pname:'诺基亚',
+            price:499
+        }];
+        var tb=document.querySelector('tbody');
+        var sou=document.querySelector('.sou');
+        var start=document.querySelector('.start');
+        var end=document.querySelector('.end');
+        var jname=document.querySelector('.jname');
+        var suo=document.querySelector('.suo');
+        setdate(data);
+        
+        function setdate(ndate){
+            tb.innerHTML ="";
+            ndate.forEach(function(value){
+            var tr=document.createElement('tr');
+            tr.innerHTML='<td>'+value.id+'</td>'+'<td>'+value.pname+'</td>'+'<td>'+value.price+'</td>';
+            tb.appendChild(tr);
+        })
+        }
+
+        sou.addEventListener('click',function(){
+            var newDate=data.filter(function(value){
+                return value.price>=start.value && value.price<=end.value;   
+            })
+            setdate(newDate);
+        })
+
+        suo.addEventListener('click',function(){
+            data.some(function(value){
+                if(value.pname===jname.value){
+                    return true;
+                }
+            })
+        })
+    </script>
+</body>
+</html>

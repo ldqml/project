@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style type="text/css">
+        .container {
+            padding-top: 150px;
+        }
+        .list-group {
+            display: none;
+            width: 500px;
+        }
+        .form-control {
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group">
+            <input type="text" id="search" placeholder="请输入关键字" class="form-control">
+            <ul class="list-group" id="list-box">
+                <li class="list-group-item">提示文字显示的地方</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var sec=document.getElementById('search')
+        var lis=document.getElementById('list-box')
+    </script>
+</body>
+</html>

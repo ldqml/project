@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="du">读取</button>
+    <button type="button" id="xiu">修改</button>
+    <div id="aa">
+        <p>我是一段文本</p>
+    </div>
+    <div id="bb">
+        <p>我也是一段文本</p>
+    </div>
+    <button type="button" id="da">变大</button>
+    <button type="button" id="hong">变红</button>
+    <button type="button" id="yiqi">一起变</button>
+    <div id="a" style="width:100px;height:100px;background: #000;margin-top: 10px;"></div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#du').click(function(){
+            $('#aa').text();
+        });
+        $('#xiu').click(function(){
+            $('#bb').text('我是新的文本');
+        })
+        $('#da').click(function(){
+            $('#a').css('width','200px');
+            $('#a').css('height','200px');
+        })
+        $('#da').click(function(){
+            $('#a').css('width','200px');
+            $('#a').css('height','200px');
+        })
+    })
+</script>

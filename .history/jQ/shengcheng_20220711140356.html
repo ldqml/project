@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        thead th{
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid white;
+            background-color: aqua;
+        }
+        #tb1 td{
+            border: 1px solid;
+            text-align:center;
+        }
+    </style>
+</head>
+    <input type="button" value="获取数据" id="bt1"/>
+    <table>
+        <thead>
+            <th>标题</th>
+            <th>地址</th>
+            <th>说明</th>
+        </thead>
+        <tbody id="tb1">
+
+        </tbody>
+    </table>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        var data =[{
+            name:'黑马',
+            url:'www.heima.com',
+            type:'sldhflshgshgs'
+        },{
+            name:'尚硅谷',
+            url:'www.shangguigu.com',
+            type:'jkfgjghjhdfj'
+        },{
+            name:'千锋',
+            url:'www.qianfeng.com',
+            type:'sldhflshgshgs'
+        }]
+
+        // $('#bt1').click(function(){
+        //     var list=[];
+        //     for(i=0;i<data.length;i++){
+        //         list.push('<tr>')
+        //             for(var key in data[i]){
+        //                 list.push('<td>')
+        //                 list.push(data[i][key])
+        //                 list.push('</td>')
+        //             }
+        //         list.push('</tr>')
+        //     }
+        //     $('#tb1').html(list.join(""))
+        // })
+        $('bt1').click(function(){
+            for(var i=0;i<data.length;i++){
+                var $tr=$("<tr><td>"+data[i]['name']+"</td><td>"+data[i]['url']+"</td><td>"+data[i]['type']+"</td></tr>");
+                $('#tb1').append($tr);
+            }
+        })
+    })
+</script>

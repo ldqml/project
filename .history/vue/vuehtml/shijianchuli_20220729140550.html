@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../vuejs/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2>欢迎来到{{name}}</h2>
+        <button v-on:click="dianji1">点我提示信息1</button>
+        <button @click="dianji2(event,666)">点我提示信息2</button>
+    </div>
+    <script>
+        Vue.config.productionTip=false
+        const vm=new Vue({
+            el:'#root',
+            data:{
+                name:'abcd'
+            },
+            methods:{
+                dianji1(event){
+                    alert('信息1')
+                },
+                dianji2(event,number){
+                    alert('信息2')
+                    console.log(number)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

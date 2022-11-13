@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<br>
+    <input type="text" name="" id="a"></br>
+    <input type="text" name="" id="b"></br>
+    <input type="button" value="提交" id="btn">
+    <script type="text/javascript">
+        var btn =document.getElementById("btn");
+        var a = document.getElementById("a");
+        var b = document.getElementById("b");
+        btn.addEventListener("click",function(){
+            var ajax = XMLHttpRequest()
+            var usename =a.value
+            var useage =b.value
+            var params ='name='+usename+'&age='+useage
+            xhr.open('get','http://localhost:8080/get?'+params)
+            xhr.send()
+            xhr.onload=function(){
+                console.log(xhr.responseText)
+            }
+        })
+    </script>
+</body>
+</html>

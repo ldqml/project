@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .da{
+            width: 360px;
+            height:500px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .dv1{
+            width: 360px;
+            text-align: center;
+        }
+        tr > td{
+            border: 1px solid;
+            width: 120px;
+            height: 30px;
+            text-align: center;
+        }
+        .t1{
+            background-color: aqua;
+        }
+        a{
+            text-decoration: none;
+        }
+        table{
+            border:1px solid;
+        }
+        .mask{
+            position:absolute;
+            background-color:#fbfbfb;
+            z-index:1;
+            top:45%;
+            width:300px;
+            height:170px;
+            left:50%;
+            border:1px solid #fbfbfb;
+            box-shadow:10px 10px 5px #888888;
+            border-radius:5px;
+            margin-top:-60px;
+            margin-left:-150px;
+            text-align:center;
+            user-select:none;
+            display: none;
+        }
+        .mask1{
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background-color:#000;
+            opacity:0.3;
+            display: none;
+        }
+        .aa,.cc,.bt3{
+            margin-top: 15px;
+        }
+        #bb{
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            right: 0;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="da">
+    <button class="bt1">添加数据</button>
+    <div class="dv1">
+        <table cellpadding="0" cellspacing="0">
+            <thead>
+                <tr class="t1">
+                    <td>111</td>
+                    <td>222</td>
+                    <td>333</td>
+                </tr>
+            </thead>
+            <tbody class="tb1">
+                <tr>
+                    <td>1</td>
+                    <td>222</td>
+                    <td><a class="a1" href="#"> Delete</a></td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>222</td>
+                    <td><a class="a2" href="#"> Delete</a></td>
+                </tr>
+                <tr>
+                    <td>111</td>
+                    <td>222</td>
+                    <td><a class="a3" href="#"> Delete</a></td>
+                </tr>
+                <tr>
+                    <td>1111</td>
+                    <td>222</td>
+                    <td><a class="a4" href="#"> Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <div class="mask1" id="zhe1"></div>
+    <div class="mask" id="zhe">
+        <div class="aa">
+            <span>添加数据</span>
+            <div id="bb">×</div>
+        </div>
+        <div class="cc">
+            <label class="lb" for="cc-for">课程名称：</label>
+            <input type="text" class="dd" id="cc-for" placeholder="请输入课程名称">
+        </div>
+        <div class="cc">
+            <label class="lb" for="cc-sss">所属学院：</label>
+            <input type="text" class="ee" id="cc-sss" placeholder="请输入学院名称">
+        </div>
+        <div class="bt3">
+            <input type="button" value="提交" id="bt3-a">
+        </div>
+</div>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.bt1').click(function(){
+          $('.mask , .mask1').show(); 
+        })
+        $('#bb').click(function(){
+          $('.mask , .mask1').hide();
+        })
+        $('#bt3-a').click(function(){
+            var neirong1=$('.dd').val();
+            var neirong2=$('.ee').val();
+            var newtr='<tr>
+                    <td>'+1111+'</td>
+                    <td>'+222+'</td>
+                    <td><a class="a4" href="#">Delete</a></td>
+                </tr>'
+        })
+    })
+</script>

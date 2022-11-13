@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .da{
+            width:500px;
+            height:200px;
+            margin: 0 auto;
+            margin-top:100px;
+        }
+        .tab{
+            border: 1px solid #ddd;
+            border-bottom:0;
+            height:30px;
+            width:300px;
+        }
+        .tab li{
+            position: relative;
+            float: left;
+            width:60px;
+            height:30px;
+            text-align: center;
+            line-height: 30px;
+            cursor:pointer;
+            border-top:4px solid skyblue;
+        }
+        .mg{
+            width: 300px;
+            height: 200px;
+            border: 1px solid;
+        }
+        .mg .md1{
+            float: left;
+            margin-top: 26px;
+            margin-left: 50px;
+            display: none;
+        }
+        .mg .xian{
+            display: block;
+        }
+        .tab li.active{
+            border-color: blue;
+            border-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="da">
+        <ul class="tab">
+            <li class="tab-item active">第一页</li>
+            <li class="tab-item">第二页</li>
+            <li class="tab-item">第三页</li>
+            <li class="tab-item">第四页</li>
+            <li class="tab-item">第五页</li>
+        </ul>
+        <div class="mg">
+            <div class="md1 xian">
+                <a href="#"><img src="./img/01.jpg" alt=""/></a>
+            </div>
+            <div class="md1">
+                <a href="#"><img src="./img/02.jpg" alt=""/></a>
+            </div>
+            <div class="md1">
+                <a href="#"><img src="./img/03.jpg" alt=""/></a>
+            </div>
+            <div class="md1">
+                <a href="#"><img src="./img/04.jpg" alt=""/></a>
+            </div>
+            <div class="md1">
+                <a href="#"><img src="./img/05.jpg" alt=""/></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.tab > li').mouseenter(function(){
+            $(this).addClass('active').siblings('li').removeClass('active');
+            var idx=$(this).index();
+            $('.mg > .md1').eq(idx).addClass('xian').siblings('div').removeClass('xian');
+        })
+    })
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var contact = {
+    qq:"111111",
+    name:"zhansan",
+    tel:"13546448",
+    sex:"men",
+    url:"http://www.dshfgjf"
+}
+var memberfilter = ["name","tel","sex"];
+var jsontext = JSON.stringify(contact,memberfilter,"\t");
+document.write("<pre>"+jsontext+"</pre>");
+    </script>
+</head>
+<body>
+</body>
+</html>

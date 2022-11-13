@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function dg (n){
+            if(n===1||n===2){
+                return 1
+            }
+            return dg(n-1)+dg(n-2);
+        }
+        dg();
+        console.log(dg(6));
+    </script>
+</body>
+</html>

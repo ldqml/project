@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    width: 90vw;
+  }

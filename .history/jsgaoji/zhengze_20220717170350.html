@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bd{
+            width:700px;
+            height:800px;
+            border:1px solid;
+            margin:0 auto;
+            margin-top:50px;
+        }
+        ul{
+            list-style-type:none;
+        }
+        li{
+            height: 80px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 60px;
+        }
+        input{
+            position:absolute;
+            width: 200px;
+            height: 35px;
+            margin-top: 12px;
+            right: 700px;
+        }
+        label{
+            position:absolute;
+            right: 900px;
+        }
+        .li1{
+            margin-top: 30px;
+        }
+        .mima{
+            width: 200px;
+            height: 60px;
+            position:absolute;
+            right: 670px;
+            margin-top: 53px;
+        }
+        .ruo{
+            width: 25px;
+            height: 15px;
+            background: red;
+            float: left;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+        .zhong{
+            width: 25px;
+            height: 15px;
+            background:yellow;
+            float: left;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+        .qiang{
+            width: 25px;
+            height: 15px;
+            background:green;
+            float: left;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+        .mmqd{
+            float: left;
+            font-size: 14px;
+        }
+        .success{
+            color: green;
+            margin-left: 10px;
+        }
+        .erry{
+            color:red;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script src="js/zhengze.js"></script>
+    <div class="bd">
+        <ul class="bd1">
+            <li class="li1">
+                <label for="tel">手机号：</label>
+                <input type="text" class="inp1">
+                <span class=""></span>
+            </li>
+            <li>
+                <label for="tel">QQ：</label>
+                <input type="text" class="inp2">
+            </li>
+            <li>
+                <label for="tel">昵称：</label>
+                <input type="text" class="inp3">
+            </li>
+            <li>
+                <label for="tel">短信验证码：</label>
+                <input type="text" class="inp4">
+            </li>
+            <li>
+                <label for="tel">登入密码：</label>
+                <input type="text" class="inp5">
+                <div class="mima">
+                    <span class="mmqd">密码强度:</span>
+                    <span class="ruo">弱</span>
+                    <div class="zhong">中</div>
+                    <div class="qiang">强</div>
+                </div>
+            </li>
+            <li>
+                <label for="tel">确认密码：</label>
+                <input type="text" class="inp6">
+            </li>
+            <li>
+                <label for="tel">手机号：</label>
+                <input type="text" class="inp7">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

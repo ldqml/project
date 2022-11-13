@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .da{
+            width: 200px;
+            height: 280px;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .an{
+            position:fixed;
+            display: inline-block;
+            width: 40px;
+            height: 12px;
+            border: 1px solid white;
+            line-height: 10px;
+            text-align: center;
+            right: 0;
+            color: aliceblue;
+        }
+        .div1{
+            margin-bottom: 0;
+            position: relative
+        }
+    </style>
+</head>
+<body>
+    <div class="da" id="dada">
+        <span class="an">×</span>
+        <div class="div1">
+            <img src="img/01.jpg"/>
+        </div>
+        <div class="div2">
+            <img src="img/02.jpg"/>
+        </div>
+    </div>
+</body>
+</html>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('.an').click(function(){
+            $('.div2').animate({
+                height:0
+            },1000)
+        });
+    })
+</script>
